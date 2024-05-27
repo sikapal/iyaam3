@@ -478,7 +478,7 @@ top: 17%;
   
   p{
     margin-top: 20px;
-    color: blue;
+    color:var(--color-febd69);
     display:flex;
      justify-content:center ;
   }
@@ -488,6 +488,15 @@ top: 17%;
   font-size: 13px;
   color: var(--color-777777);
 
+}
+
+.googleContainer{
+
+  padding-top: 20px;
+  p{
+    font-size: 15px;
+   color: #000000;
+  }
 }
 /*Authentication card end*/
 
