@@ -11,7 +11,7 @@ const Home = () => {
         <div className="row" >
           <div className='col-6'>
             <div className='main-banner position-relative '>
-              <img className='img-fluid rounded-3' src='images/main-banner-1.jpg' alt='main banner' />
+              <img className='img-fluid rounded-3' src='images/main-banner.jpg' alt='main banner' />
 
               <div className='main-banner-content position-absolute'>
                 <h4>Supercharged for pro</h4>

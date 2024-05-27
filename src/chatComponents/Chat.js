@@ -1,7 +1,7 @@
 import React, { useState,useEffect,useRef } from "react";
 import "./chat.css";
 import info from "../images/info.png";
-import video from "../images/video.png";
+//import video from "../images/video.png";
 import phone from "../images/phone.png";
 import avatar from "../images/avatar.png";
 import emoji from "../images/emoji.png";
@@ -36,8 +36,9 @@ const Chat = () => {
         </div>
         <div className="icons">
           <img src={phone} alt="phone" />
-          <img src={video} alt="video" />
           <img src={info} alt="info" />
+          { /** <img src={video} alt="video" />*/} 
+         
         </div>
       </div>
           <div className="center">
