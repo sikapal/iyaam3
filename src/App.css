@@ -86,6 +86,10 @@ a {
 
 }
 
+.header-upper h3 span {
+  color:var( --color-bf4800);
+}
+
 .header-upper .input-group-text {
   background-color: var(--color-febd69);
 }
@@ -110,6 +114,9 @@ a {
   text-transform: uppercase;
 
 }
+
+
+
 
 .header-bottom .dropdown button:focus {
   box-shadow: none;
@@ -551,21 +558,30 @@ padding: 30px;
  height: 100px;
  border-radius: 10px;
 }
-.other-product-images{
-  background-color: white;
-  padding: 20px;
-  
+
+.other-product-images  {
+ 
+ padding: 40px 0px;
+ object-fit: cover;
+ margin-left: 10px;
+
+ 
 }
-.other-product-images > div {
-  border: 1px solid rgba(0,0,0,0.25);
- padding: 20px;
- width: 48%;
-}
-.main-product-image .js-image-zoom_zoomed-image{
+.main-product-image {
+
  left: 230px !important;
  padding: 10px;
+ width: 100%;
+ height: 75%;
  background-color: white;
  border: 10px;
+ 
+}
+.main-product-image img {
+ 
+  height: 70%;
+  align-items: center;
+  justify-content: center;
 }
 .main-product-details{
   padding: 30px 20px ;
@@ -702,3 +718,85 @@ a{
 
 }
 /*Profile end*/
+
+
+/* footer start*/
+
+.Footer {
+  padding: 2rem 0;
+
+}
+
+.ft-1 h3 {
+  font-weight: 700;
+  font-family: cursive;
+  letter-spacing: 2px;
+  padding: 0.5rem 0;
+}
+
+.ft-1 span {
+  color:var( --color-bf4800);
+}
+
+.ft-1 p {
+  padding: 0rem 5rem 0.8rem 0;
+  font-weight: 500;
+}
+
+.footer-icons i {
+  padding: 0.4rem 0.5rem;
+  background: #e1e1e1;
+  color:var( --color-bf4800);
+  margin: 0 0.5rem;
+  border-radius: 50%;
+}
+
+.footer-icons i:hover {
+  background:var( --color-bf4800);
+  color: #fff;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.Footer h5 {
+  color:var( --color-bf4800);
+}
+
+.ft-2 ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ft-2 ul li {
+  padding: 0.35rem 0;
+  font-weight: 500;
+  color: white;
+}
+
+.ft-2 ul a {
+  text-decoration: none;
+  
+  font-size: 1.06rem;
+}
+
+.ft-3 p {
+  font-weight: 500;
+  padding: 0.1rem 0;
+  font-size: 1.06rem;
+}
+
+.ft-3 i {
+  padding-right: 0.5rem;
+}
+
+.Last-footer {
+  background:var( --color-bf4800);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.Last-footer p {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}

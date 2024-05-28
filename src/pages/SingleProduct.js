@@ -1,21 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Meta from "../components/Meta";
 import BreadCrumb from "../components/BreadCrumb";
 import ProductCard from "../components/ProductCard";
-//import ReactImageZoom from "react-image-zoom";
 import { TbGitCompare } from "react-icons/tb";
 import { AiOutlineHeart } from "react-icons/ai";
 
+import image1 from "../images/watch1.jpg";
+import image2 from "../images/watch2.jpg";
+import image3 from "../images/watch3.jpg";
+import image4 from "../images/watch4.jpg";
+
 const SingleProduct = () => {
- /*
-  const props = {
-    width: 400,
-    height: 250,
-    zoomWidth: 500,
-    img: "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg",
-  };
-*/
-  /*  const [orderedProduct, setorderedProduct] = useState(false)*/
+  const [currentImage, setCurrentImage] = useState(0);
+  const productImages = [image1, image2, image3, image4];
+
   return (
     <>
       <Meta title={"Product Name"} />
@@ -25,37 +23,47 @@ const SingleProduct = () => {
           <div className="row">
             <div className="col-6">
               <div className="main-product-image">
-                <div>
-                { /* <ReactImageZoom {...props} /> */}
-                </div>
+                <img src={productImages[currentImage]} alt="prod" />
               </div>
-              <div className="other-product-images d-flex  flex-wrap gap-15">
+              <div className="other-product-images d-flex flex-wrap gap-4">
                 <div>
                   <img
-                    src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg"
-                    alt="watch"
-                    className="img-fluid"
+                    src={productImages[3]}
+                    width={50}
+                    height={50}
+                    alt="product img"
+                    className=" rounded-md cursor-pointer"
+                    onMouseOver={(e) => setCurrentImage(3)}
                   />
                 </div>
                 <div>
                   <img
-                    src="https://images.pexels.com/photos/2113994/pexels-photo-2113994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="watch"
-                    className="img-fluid"
+                    src={productImages[1]}
+                    width={50}
+                    height={50}
+                    alt="product img"
+                    className="rounded-md cursor-pointer"
+                    onMouseOver={(e) => setCurrentImage(1)}
                   />
                 </div>
                 <div>
                   <img
-                    src="https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="watch"
-                    className="img-fluid"
+                    src={productImages[2]}
+                    width={50}
+                    height={50}
+                    alt="product img"
+                    className="rounded-md cursor-pointer"
+                    onMouseOver={(e) => setCurrentImage(2)}
                   />
                 </div>
                 <div>
                   <img
-                    src="https://images.pexels.com/photos/236915/pexels-photo-236915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="watch"
-                    className="img-fluid"
+                    src={productImages[3]}
+                    width={50}
+                    height={50}
+                    alt="product img"
+                    className="rounded-md cursor-pointer"
+                    onMouseOver={(e) => setCurrentImage(3)}
                   />
                 </div>
               </div>

@@ -37,79 +37,74 @@ const Chat = () => {
         <div className="icons">
           <img src={phone} alt="phone" />
           <img src={info} alt="info" />
-          { /** <img src={video} alt="video" />*/} 
-         
+          {/** <img src={video} alt="video" />*/}
         </div>
       </div>
-          <div className="center">
-              
-             
-              <div className="message">
-                  <img src={avatar} alt="avatar" />
-                  <div className="text">
-                      <p>
-                          Cet ouvrage, très populaire pendant la Renaissance,
-                          est un traité sur la théorie de l'éthique. Les premières
-                          lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...",
-                          proviennent des sections 1.10.32 et 1.10.33 du
-                          "De Finibus Bonorum et Malorum" de Cicéron.
-                      </p>
-                      <span> 1 min ago</span>
-                  </div>
-              </div>
-              <div className="message own">
-                  
-                  <div className="text">
-                      <p>
-                          Cet ouvrage, très populaire pendant la Renaissance,
-                          est un traité sur la théorie de l'éthique. Les premières
-                          lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet.
-                      </p>
-                      <span> 1 min ago</span>
-                  </div>
-              </div>
+      <div className="center">
+        <div className="message">
+          <img src={avatar} alt="avatar" />
+          <div className="text">
+            <p>
+              Cet ouvrage, très populaire pendant la Renaissance, est un traité
+              sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum,
+              "Lorem ipsum dolor sit amet...", proviennent des sections 1.10.32
+              et 1.10.33 du "De Finibus Bonorum et Malorum" de Cicéron.
+            </p>
+            <span> 1 min ago</span>
+          </div>
+        </div>
+        <div className="message own">
+          <div className="text">
+            <p>
+              Cet ouvrage, très populaire pendant la Renaissance, est un traité
+              sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum,
+              "Lorem ipsum dolor sit amet.
+            </p>
+            <span> 1 min ago</span>
+          </div>
+        </div>
 
-              <div className="message">
-                  <img src={avatar} alt="avatar" />
-                  <div className="text">
-                      <p>
-                          Cet ouvrage, très populaire pendant la Renaissance,
-                          est un traité sur la théorie de l'éthique. Les premières
-                          lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet.
-                      </p>
-                      <span> 1 min ago</span>
-                  </div>
-              </div>
-              <div className="message own">
-                  
-                  <div className="text">
-                      <p>
-                          Cet ouvrage, très populaire pendant la Renaissance,
-                          est un traité sur la théorie de l'éthique. Les premières
-                          lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet.
-                      </p>
+        <div className="message">
+          <img src={avatar} alt="avatar" />
+          <div className="text">
+            <p>
+              Cet ouvrage, très populaire pendant la Renaissance, est un traité
+              sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum,
+              "Lorem ipsum dolor sit amet.
+            </p>
+            <span> 1 min ago</span>
+          </div>
+        </div>
+        <div className="message own">
+          <div className="text">
+            <p>
+              Cet ouvrage, très populaire pendant la Renaissance, est un traité
+              sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum,
+              "Lorem ipsum dolor sit amet.
+            </p>
 
-                      <img className='img-text' src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="pho"/>
-                      <span> 1 min ago</span>
-                  </div>
-              </div>
-              
-              <div className="message">
-                  <img src={avatar} alt="avatar" />
-                  <div className="text">
-                      <p>
-                          Cet ouvrage, très populaire pendant la Renaissance,
-                          est un traité sur la théorie de l'éthique. Les premières
-                          lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet..
-                      </p>
-                      <span> 1 min ago</span>
-                  </div>
-              </div>
-              
-              
-           
-           <div ref={endRef}></div>  
+            <img
+              className="img-text"
+              src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="pho"
+            />
+            <span> 1 min ago</span>
+          </div>
+        </div>
 
+        <div className="message">
+          <img src={avatar} alt="avatar" />
+          <div className="text">
+            <p>
+              Cet ouvrage, très populaire pendant la Renaissance, est un traité
+              sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum,
+              "Lorem ipsum dolor sit amet..
+            </p>
+            <span> 1 min ago</span>
+          </div>
+        </div>
+
+        <div ref={endRef}></div>
       </div>
       <div className="bottom">
         <div className="icons">
@@ -127,13 +122,13 @@ const Chat = () => {
           <img
             src={emoji}
             alt="emoji"
-           // onClick={() => setOpen((prev) => !prev)}
+            // onClick={() => setOpen((prev) => !prev)}
           />
-                 { /*   <div className="picker">
+          {/*   <div className="picker">
                   
                      <EmojiPicker open={open} onEmojiClick={handleEmoji} />  
                   </div>
-                  */}  
+                  */}
         </div>
         <button className="send">Send</button>
       </div>
