@@ -83,7 +83,7 @@ a {
 
 .header-upper {
   background-color: var(--color-131921);
-
+  
 }
 
 .header-upper h3 span {
@@ -112,11 +112,7 @@ a {
   letter-spacing: .3;
   text-emphasis: 0.3;
   text-transform: uppercase;
-
 }
-
-
-
 
 .header-bottom .dropdown button:focus {
   box-shadow: none;
@@ -126,7 +122,6 @@ a {
   background-color: var(--color-131921);
   width: 100%;
   transform: translate3d(0px, 57px, 0px) !important;
-
 }
 
 .header-bottom .dropdown-item {
@@ -217,7 +212,9 @@ a {
 .home.wrapper-2 {
   background-color: var(--color-f5f5f7);
 
-
+  .services{
+    margin: 40px;
+  }
 }
 
 /* Home wrapper-2 end*/
@@ -629,7 +626,34 @@ padding: 30px;
 .homecategories{
   border-radius: 10px;
   padding: 10px;
-  width: 200px;
+  width: 250px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 25px;
+  align-items: center;
+  
+}
+.list-group{
+  margin-top: -30px;
+  margin-left: 25px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+  background-color: #0460D9;
+  
+}
+
+.list-group-item{
+  cursor: pointer;
+  margin-top: 1px;
+  width: 15%;
+  margin: 5px;
+  font-size: 15px;
+  color: #0460D9;
+ 
+ 
 }
 /*Main product page end*/
 
@@ -775,7 +799,6 @@ a{
 
 .ft-2 ul a {
   text-decoration: none;
-  
   font-size: 1.06rem;
 }
 
@@ -800,3 +823,4 @@ a{
   font-size: 1.2rem;
   font-weight: 700;
 }
+

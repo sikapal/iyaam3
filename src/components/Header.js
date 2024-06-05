@@ -4,22 +4,34 @@ import { BsSearch } from "react-icons/bs"
 import { IoChatbubbleOutline } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa6";
 import { FaCodeCompare } from "react-icons/fa6";
-import { FaUser } from "react-icons/fa";
+//import { FaUser } from "react-icons/fa";
+import "rsuite/dist/rsuite.min.css";
+//import DropdownMenu from "rsuite/esm/Dropdown/DropdownMenu";
+import { Dropdown, Avatar } from "rsuite";
+
+const renderToggle = (props) => (
+  <Avatar
+    circle
+    {...props}
+    src="https://i.pravatar.cc/150?u=git@rsutiejs.com"
+  />
+);
 
 const Header = () => {
+  
   return (
     <>
       <header className="header-upper py-3">
         <div className="container-xxl">
           <div className="row align-items-center">
-            <div className="col-lg-2">
+            <div className="col-2 ">
               <Link to="/" className="text-white">
                 <h3>
-                  I<span>YAAM</span>
+                  IY<span>AA</span>M
                 </h3>
               </Link>
             </div>
-            <div className="col-lg-5 ">
+            <div className="col-lg-5  col-md-6 col-12">
               <div className="input-group ">
                 <input
                   type="text"
@@ -30,17 +42,17 @@ const Header = () => {
                 />
 
                 <span className="input-group-text p-3" id="basic-addon2">
-                  <BsSearch className="fs-6 " />
+                  <BsSearch className="fs-6" />
                 </span>
               </div>
             </div>
-            <div className="col-lg-5 ">
+            <div className="col-sm-12 col-xs-12 col-md-9 col-lg-5  ">
               <div className="header-upper-links d-flex align-items-center justify-content-between">
                 <div>
                   <Link className="d-flex align-items-center gap-10 text-white">
                     <FaCodeCompare />
                     <p className="mb-0">
-                      Compare <br />
+                      Comparer <br />
                     </p>
                   </Link>
                 </div>
@@ -51,12 +63,12 @@ const Header = () => {
                     to="/wishlists"
                   >
                     <FaRegBookmark />
-                    <p className="text-white mb-0">Bookmark</p>
+                    <p className="text-white mb-0">Signet</p>
                   </Link>
                 </div>
                 <div>
                   <Link
-                    to=""
+                    to="/chatpage"
                     className="d-flex align-items-center gap-10 text-white"
                   >
                     <IoChatbubbleOutline />
@@ -66,27 +78,31 @@ const Header = () => {
                     </p>
                   </Link>
                 </div>
-                <div>
-                  <Link
-                    to="/login"
-                    className="d-flex align-items-center gap-10 text-white"
-                  >
-                    <FaUser />
-                    <p className="mb-0">
-                      Log in <br /> My Account
-                    </p>
-                  </Link>
-                </div>
-                <div>
-                  {/* <Link className='d-flex align-items-center gap-10 text-white'>
-                    <img src='/images/cart.svg' alt='cart' />
-                    <div className='d-flex flex-column gap-10'>
-                      <span className='badge bg-white text-dark'>0</span>
-                      <p className='mb-0'> 1000</p>
 
-                    </div>
-                  </Link> */}
-                </div>
+                <Dropdown
+                  renderToggle={renderToggle}
+                  panel
+                  style={{ padding: 10, width: 160 }}
+                >
+                  <Dropdown.Item panel style={{ padding: 10, width: 170 }}>
+                    <p>
+                      Salut <strong>Lucien</strong>
+                    </p>
+                  </Dropdown.Item>
+                  <Dropdown.Separator />
+                  <Dropdown.Item>Profile</Dropdown.Item>
+                  <Dropdown.Item>Aide</Dropdown.Item>
+                  <Dropdown.Item>Parametres</Dropdown.Item>
+
+                  <Dropdown.Separator />
+
+                  <Dropdown.Item>
+                    <Link to="/login" className="text-dark">
+                      Se connecter
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item>Deconnexion</Dropdown.Item>
+                </Dropdown>
               </div>
             </div>
           </div>

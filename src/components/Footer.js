@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="row">
               <div className="col-md-6 col-lg-5 col-12 ft-1">
                 <h3>
-                  <span>I</span>YAAM
+                  <span>IYA</span>AM
                 </h3>
                 <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
 
         <div className="Last-footer">
-          <p>Design By Iyaam</p>
+          <p>Copyright Iyaam</p>
         </div>
       </footer>
     </div>

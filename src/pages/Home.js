@@ -1,15 +1,27 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import ProductCard from '../components/ProductCard'
-import SpecialProduct from '../components/SpecialProduct'
-import Container from '../components/Container'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import ProductCard from "../components/ProductCard";
+import SpecialProduct from "../components/SpecialProduct";
+import Container from "../components/Container";
 
 const Home = () => {
+  const [toggleIndex, setToggleIndex] = useState(-1);
+
+  const [backgroundColor, setBackgroundColor] = useState("#ffffff"); // Couleur de fond par défaut (blanc)
+
+  const handleToggle = (index) => {
+    setToggleIndex(toggleIndex === index ? -1 : index);
+  };
+
+  const handleColorChange = (color) => {
+    setBackgroundColor(color);
+  };
+
   return (
     <>
       <Container class1="home-wrapper-1 py-5">
         <div className="row">
-          <div className="col-6">
+          <div className="col-lg-6 col-md-12 col-12 ">
             <div className="main-banner position-relative ">
               <img
                 className="img-fluid rounded-3"
@@ -17,19 +29,19 @@ const Home = () => {
                 alt="main banner"
               />
 
-              <div className="main-banner-content position-absolute">
+              <div className="main-banner-content position-absolute  justify-content-center">
                 <h4>Supercharged for pro</h4>
                 <h5>
                   House for rent at a <br /> good Price
                 </h5>
                 <p>from 20000F to 100000F</p>
-                <Link className="button">Contact us</Link>
+                <Link className="button position-absolute">Contact us</Link>
               </div>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-lg-6 col-md-12 col-12">
             <div className="d-flex flex-wrap justify-content-between align-items-center gap-10">
-              <div className="small-banner position-relative ">
+              <div className="small-banner position-relative col-12">
                 <img
                   className="img-fluid rounded-3"
                   src="images/catbanner-01.jpg"
@@ -98,49 +110,86 @@ const Home = () => {
       <Container class1="home-wrapper-2 py-5">
         <div className="row">
           <div className="col-12">
-            <div className="services d-flex flex-wrap gap-30 ">
-              <div>
-                <div className="dropdown">
-                  <button className="homecategories d-flex align-items-center gap-15 bg-white  ">
-                    <img src="images/service.png" alt="services"></img>
-
-                    <div>
-                      <h6> immobiliers a vendre</h6>
-                    </div>
-                  </button>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <Link className="dropdown-item text-white" to="">
-                        {" "}
-                        Action
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="dropdown-item text-white" to="">
-                        Another action
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="dropdown-item text-white" to="">
-                        Something else here
-                      </Link>
-                    </li>
-                  </ul>
+            <div className="services d-flex flex-wrap gap-30">
+              <div
+                className={`homecategories  d-flex align-items-center gap-15 ${
+                  toggleIndex === 0 ? "#0460D9 text-white" : "bg-white"
+                }`}
+                onClick={() => {
+                  handleToggle(0);
+                  handleColorChange("#0460D9"); // Changer la couleur de fond en vert
+                }}
+                style={{ backgroundColor }}
+              >
+                <img src="images/service.png" alt="services"></img>
+                <div>
+                  <h6> immobiliers à vendre</h6>
                 </div>
               </div>
-              <div className="homecategories d-flex align-items-center gap-15 bg-white ">
+
+              {toggleIndex === 0 && (
+                <ul className="col-12 list-group">
+                  <li className="list-group-item ">Terrain</li>
+                  <li className="list-group-item ">Maison</li>
+                  <li className="list-group-item ">Immeuble</li>
+                  <li className="list-group-item ">Magasin</li>
+                  <li className="list-group-item ">Espace Commercial</li>
+                  <li className="list-group-item ">Autre</li>
+                </ul>
+              )}
+
+              <div
+                className={`homecategories  d-flex align-items-center gap-15 ${
+                  toggleIndex === 1 ? "#0460D9 text-white" : "bg-white"
+                }`}
+                onClick={() => {
+                  handleToggle(1);
+                  handleColorChange("#0460D9"); // Changer la couleur de fond en vert
+                }}
+                style={{ backgroundColor }}
+              >
                 <img src="images/service-02.png" alt="services"></img>
                 <div>
-                  <h6>Vetement</h6>
+                  <h6>vetement et Accessoires</h6>
                 </div>
               </div>
-              <div className="homecategories d-flex align-items-center gap-15 bg-white ">
+
+              {toggleIndex === 1 && (
+                <ul className="col-12 list-group">
+                  <li className="list-group-item">Vêtement pour enfant</li>
+                  <li className="list-group-item">Vêtement pour Femme</li>
+                  <li className="list-group-item">Sacs</li>
+                  <li className="list-group-item">Bijoux</li>
+                  <li className="list-group-item">Chaussures</li>
+                  <li className="list-group-item">Lunettes</li>
+                  <li className="list-group-item">Autre</li>
+                </ul>
+              )}
+
+              <div
+                className='homecategories d-flex align-items-center gap-15 bg-white  ${toggleIndex === 2 ? "" : "d-none" '
+                onClick={() => handleToggle(2)}
+              >
                 <img src="images/service-03.png" alt="services"></img>
                 <div>
                   <h6>electromenager</h6>
                 </div>
               </div>
-              <div className="homecategories d-flex align-items-center gap-15 bg-white ">
+
+              {toggleIndex === 2 && (
+                <ul className="col-12 list-group">
+                  <li className="list-group-item item">An item</li>
+                  <li className="list-group-item item">A second item</li>
+                  <li className="list-group-item item">A third item</li>
+                  <li className="list-group-item item">A fourth item</li>
+                  <li className="list-group-item item">And a fifth one</li>
+                </ul>
+              )}
+
+              <div
+                className='homecategories d-flex align-items-center gap-15 bg-white  ${toggleIndex === 3 ? "" : "d-none" '
+                onClick={() => handleToggle(3)}
+              >
                 <img src="images/service-03.png" alt="services"></img>
                 <div>
                   <h6>electromenager</h6>
@@ -294,6 +343,6 @@ const Home = () => {
       </Container>
     </>
   );
-}
+};
 
-export default Home
+export default Home;
