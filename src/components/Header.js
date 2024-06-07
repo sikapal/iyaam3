@@ -4,6 +4,7 @@ import { BsSearch } from "react-icons/bs"
 import { IoChatbubbleOutline } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa6";
 import { FaCodeCompare } from "react-icons/fa6";
+import { HiLocationMarker } from "react-icons/hi";
 //import { FaUser } from "react-icons/fa";
 import "rsuite/dist/rsuite.min.css";
 //import DropdownMenu from "rsuite/esm/Dropdown/DropdownMenu";
@@ -17,8 +18,7 @@ const renderToggle = (props) => (
   />
 );
 
-const Header = () => {
-  
+const Header = ({ filter, setFilter }) => {
   return (
     <>
       <header className="header-upper py-3">
@@ -33,16 +33,26 @@ const Header = () => {
             </div>
             <div className="col-lg-5  col-md-6 col-12">
               <div className="input-group ">
+                <span className="input-group-location p-3 flex-wrap d-flex bg-white">
+                  <HiLocationMarker
+                    color="#0460D9"
+                    size={25}
+                    className="m-20  m-6"
+                  />
+                </span>
+
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Search... "
+                  placeholder="Recherche Par Produit... "
                   aria-label="Search"
                   aria-describedby="basic-addon2"
+                  value={filter}
+                  onChange={(e) => setFilter(e.target.value)}
                 />
 
                 <span className="input-group-text p-3" id="basic-addon2">
-                  <BsSearch className="fs-6" />
+                  <BsSearch className="fs-6 text-white" />
                 </span>
               </div>
             </div>
@@ -123,13 +133,12 @@ const Header = () => {
                       aria-expanded="false"
                     >
                       <img src="images/menu.svg" alt="menu"></img>
-                      <span className="me-5 d-inline-block"> Categories</span>
+                      <span className="me-5 d-inline-block"> Publier</span>
                     </button>
                     <ul className="dropdown-menu">
                       <li>
-                        <Link className="dropdown-item text-white" to="">
-                          {" "}
-                          Action
+                        <Link className="dropdown-item text-white" to="/post">
+                          Bien Immobilier à vendre
                         </Link>
                       </li>
                       <li>
@@ -161,7 +170,6 @@ const Header = () => {
       </header>
     </>
   );
-
-}
+};
 
 export default Header

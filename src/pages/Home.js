@@ -113,38 +113,38 @@ const Home = () => {
             <div className="services d-flex flex-wrap gap-30">
               <div
                 className={`homecategories  d-flex align-items-center gap-15 ${
-                  toggleIndex === 0 ? "#0460D9 text-white" : "bg-white"
+                  toggleIndex === 0 ? "#b3cff3 " : "bg-white"
                 }`}
                 onClick={() => {
                   handleToggle(0);
-                  handleColorChange("#0460D9"); // Changer la couleur de fond en vert
+                  handleColorChange("#b3cff3"); // Changer la couleur de fond en vert
                 }}
                 style={{ backgroundColor }}
               >
                 <img src="images/service.png" alt="services"></img>
                 <div>
-                  <h6> immobiliers à vendre</h6>
+                  <h6> Biens immobiliers à vendre</h6>
                 </div>
               </div>
-
+              ;
               {toggleIndex === 0 && (
                 <ul className="col-12 list-group">
                   <li className="list-group-item ">Terrain</li>
                   <li className="list-group-item ">Maison</li>
                   <li className="list-group-item ">Immeuble</li>
+                  <li className="list-group-item ">Duplex</li>
                   <li className="list-group-item ">Magasin</li>
                   <li className="list-group-item ">Espace Commercial</li>
                   <li className="list-group-item ">Autre</li>
                 </ul>
               )}
-
               <div
                 className={`homecategories  d-flex align-items-center gap-15 ${
-                  toggleIndex === 1 ? "#0460D9 text-white" : "bg-white"
+                  toggleIndex === 1 ? "#b3cff3 " : "bg-white"
                 }`}
                 onClick={() => {
                   handleToggle(1);
-                  handleColorChange("#0460D9"); // Changer la couleur de fond en vert
+                  handleColorChange("#b3cff3"); // Changer la couleur de fond en vert
                 }}
                 style={{ backgroundColor }}
               >
@@ -153,11 +153,10 @@ const Home = () => {
                   <h6>vetement et Accessoires</h6>
                 </div>
               </div>
-
               {toggleIndex === 1 && (
                 <ul className="col-12 list-group">
                   <li className="list-group-item">Vêtement pour enfant</li>
-                  <li className="list-group-item">Vêtement pour Femme</li>
+                  <li className="list-group-item">Vêtement pour femme</li>
                   <li className="list-group-item">Sacs</li>
                   <li className="list-group-item">Bijoux</li>
                   <li className="list-group-item">Chaussures</li>
@@ -165,27 +164,90 @@ const Home = () => {
                   <li className="list-group-item">Autre</li>
                 </ul>
               )}
-
               <div
-                className='homecategories d-flex align-items-center gap-15 bg-white  ${toggleIndex === 2 ? "" : "d-none" '
-                onClick={() => handleToggle(2)}
+                className={`homecategories  d-flex align-items-center gap-15 ${
+                  toggleIndex === 2 ? "#b3cff3 " : "bg-white"
+                }`}
+                onClick={() => {
+                  handleToggle(2);
+                  handleColorChange("#b3cff3"); // Changer la couleur de fond en vert
+                }}
+                style={{ backgroundColor }}
               >
                 <img src="images/service-03.png" alt="services"></img>
                 <div>
-                  <h6>electromenager</h6>
+                  <h6>Bien immobiliers à louer</h6>
                 </div>
               </div>
-
               {toggleIndex === 2 && (
                 <ul className="col-12 list-group">
-                  <li className="list-group-item item">An item</li>
-                  <li className="list-group-item item">A second item</li>
-                  <li className="list-group-item item">A third item</li>
-                  <li className="list-group-item item">A fourth item</li>
-                  <li className="list-group-item item">And a fifth one</li>
+                  <li className="list-group-item item">Appartement</li>
+                  <li className="list-group-item item">Maison</li>
+                  <li className="list-group-item item">Duplex</li>
+                  <li className="list-group-item item">Villa</li>
+                  <li className="list-group-item item">Espace Commercial</li>
+                  <li className="list-group-item item">Bureau</li>
+                  <li className="list-group-item item">Chambres</li>
+                  <li className="list-group-item item">Studio</li>
+                  <li className="list-group-item item">Salle de Fête</li>
+                  <li className="list-group-item item">Boutique</li>
+                  <li className="list-group-item item">Autres</li>
                 </ul>
               )}
-
+              <div
+                className={`homecategories  d-flex align-items-center gap-15 ${
+                  toggleIndex === 3 ? "#b3cff3 " : "bg-white"
+                }`}
+                onClick={() => {
+                  handleToggle(3);
+                  handleColorChange("#b3cff3"); // Changer la couleur de fond en vert
+                }}
+                style={{ backgroundColor }}
+              >
+                <img src="images/service-03.png" alt="services"></img>
+                <div>
+                  <h6>Véhicules</h6>
+                </div>
+              </div>
+              {toggleIndex === 3 && (
+                <ul className="col-12 list-group">
+                  <li className="list-group-item item">Voiture</li>
+                  <li className="list-group-item item">Moto</li>
+                  <li className="list-group-item item">Camions</li>
+                  <li className="list-group-item item">Tricycles</li>
+                  <li className="list-group-item item">Tracteur</li>
+                  <li className="list-group-item item">Bicyclette</li>
+                  <li className="list-group-item item">Pieces de véhicules</li>
+                  <li className="list-group-item item">Bateau</li>
+                  <li className="list-group-item item">Bus</li>
+                  <li className="list-group-item item">Vans</li>
+                  <li className="list-group-item item">Autres</li>
+                </ul>
+              )}
+              <div
+                className={`homecategories  d-flex align-items-center gap-15 ${
+                  toggleIndex === 4 ? "#b3cff3 " : "bg-white"
+                }`}
+                onClick={() => {
+                  handleToggle(4);
+                  handleColorChange("#b3cff3"); // Changer la couleur de fond en vert
+                }}
+                style={{ backgroundColor }}
+              >
+                <img src="images/service-03.png" alt="services"></img>
+                <div>
+                  <h6>Téléphones et Accessoires</h6>
+                </div>
+              </div>
+              {toggleIndex === 4 && (
+                <ul className="col-12 list-group">
+                  <li className="list-group-item item">Téléphone Portable</li>
+                  <li className="list-group-item item">Téléphone fixe</li>
+                  <li className="list-group-item item">
+                    Accessoires Téléphone
+                  </li>
+                </ul>
+              )}
               <div
                 className='homecategories d-flex align-items-center gap-15 bg-white  ${toggleIndex === 3 ? "" : "d-none" '
                 onClick={() => handleToggle(3)}
