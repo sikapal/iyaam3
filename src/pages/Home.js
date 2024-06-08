@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import SpecialProduct from "../components/SpecialProduct";
 import Container from "../components/Container";
+import ScrollButton from "../components/ScrollButton";
 
 const Home = () => {
   const [toggleIndex, setToggleIndex] = useState(-1);
@@ -402,6 +403,7 @@ const Home = () => {
           <ProductCard />
           <ProductCard />
         </div>
+        <ScrollButton />
       </Container>
     </>
   );

@@ -101,7 +101,8 @@ const Header = ({ filter, setFilter }) => {
                   </Dropdown.Item>
                   <Dropdown.Separator />
                   <Dropdown.Item>Profile</Dropdown.Item>
-                  <Dropdown.Item>Aide</Dropdown.Item>
+                  <Dropdown.Item>Partager</Dropdown.Item>
+                  <Dropdown.Item>Parrainnage</Dropdown.Item>
                   <Dropdown.Item>Parametres</Dropdown.Item>
 
                   <Dropdown.Separator />
