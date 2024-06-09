@@ -18,31 +18,31 @@ import Chatpage from "./chatComponents/Chatpage";
 import Chat from "./chatComponents/Chat";
 import Detail from "./chatComponents/Detail";
 import List from "./chatComponents/List";
-import NewPost from "./pages/NewPost/NewPost";
+import NewPost from './pages/NewPost/NewPost';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layouts />}>
-          <Route index element={<Home />}></Route>
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="product" element={<OurStore />} />
-          <Route path="wishlists" element={<Wishlists />} />
-          <Route path="login" element={<Login />} />
-          <Route path="forgot-password" element={<Forgotpassword />} />
-          <Route path="signup" element={<Signup />} />
-          <Route path="reset-password" element={<Resetpassword />} />
-          <Route path="product/:id" element={<SingleProduct />}></Route>
-          <Route path="test" element={<Test />} />
-          <Route path="user-profile" element={<Userprofile />} />
-
-          <Route path="chatpage" element={<Chatpage />} />
+        <Route path='/' element={<Layouts/>}> 
+          <Route index element={<Home/>}></Route>
+          <Route path='about' element={<About/>}/>
+          <Route path='contact' element={<Contact/>}/>
+          <Route path='product' element={<OurStore/>}/>
+          <Route path='wishlists' element={<Wishlists/>}/>
+          <Route path='login' element={<Login/>}/>
+          <Route path='forgot-password' element={<Forgotpassword/>}/>
+          <Route path='signup' element={<Signup/>}/>
+          <Route path='reset-password' element={<Resetpassword/>}/>
+          <Route path='product/:id' element={<SingleProduct/>}></Route>
+          <Route path='test' element={<Test/>}/>
+          <Route path='user-profile' element={<Userprofile />} />
+          
+          <Route path="chatpage" element={<Chatpage/>} />
           <Route path="chat" element={<Chat />} />
-          <Route path="detail" element={<Detail />} />
+          <Route path="detail" element={<Detail/>} />
           <Route path="list" element={<List />} />
-          <Route path="post" element={<NewPost />} />
+          <Route path="post" element={<NewPost/>} />
         </Route>
       </Routes>
     </BrowserRouter>

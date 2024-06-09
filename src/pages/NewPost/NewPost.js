@@ -1,18 +1,18 @@
 import React from "react";
 import "./newpost.css";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Meta from "../../components/Meta";
 import BreadCrumb from "../../components/BreadCrumb";
 import DropFileInput from "../../components/DropFileInput.js";
 
 const NewPost = () => {
-  const [value, setValue] = useState("");
-  const [images, setImages] = useState([]);
-  const [error, setError] = useState("");
-
+  //const [value, setValue] = useState("");
+  //const [images, setImages] = useState([]);
+ // const [error, setError] = useState("");
+ const [error] = useState("");
   const onFileChange = (files) => {
-    console.log(files);
+   
   };
 
   return (

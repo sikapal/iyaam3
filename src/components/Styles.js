@@ -6,10 +6,10 @@ export const Button = styled.div`
   left: 95%;
   bottom: 40px;
   height: 20px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   z-index: 1;
   cursor: pointer;
-  color: var(--color-bf4800);
+  color: var(--color-1c1c1b);
 
   &:hover {
     &:before {

@@ -9,6 +9,8 @@ import image1 from "../images/watch1.jpg";
 import image2 from "../images/watch2.jpg";
 import image3 from "../images/watch3.jpg";
 import image4 from "../images/watch4.jpg";
+import Share from "../components/Share";
+import { FaShareFromSquare } from "react-icons/fa6";
 
 const SingleProduct = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -73,39 +75,38 @@ const SingleProduct = () => {
                 <div className="border-bottom">
                   <h3 className="title">Pack de 10 Montres de marque </h3>
                 </div>
-                <div className="border-bottom py-3">
+                <div className="border-bottom py-2">
                   <div className="price">
-                    <strong>PRICE</strong> : 60000{" "}
+                    <strong>PRICE</strong> : 60000
                     <span>
-                      {" "}
                       <strong>F</strong>
                     </span>
                   </div>
                 </div>
 
-                <div className="border-bottom ">
-                  <div className="d-flex gap-10 align-items-center">
-                    <h3 className="product-heading">ABC :</h3>{" "}
+                <div className="border-bottom  ">
+                  <div className="d-flex gap-10 align-items-center m-1">
+                    <h3 className="product-heading">ABC :</h3>
                     <p className="product-data">abcdf</p>
                   </div>
-                  <div className="d-flex gap-10 align-items-center">
-                    <h3 className="product-heading">BC :</h3>{" "}
+                  <div className="d-flex gap-10 align-items-center m-1 ">
+                    <h3 className="product-heading">BC :</h3>
                     <p className="product-data">abcdf</p>
                   </div>
-                  <div className="d-flex gap-10 align-items-center">
-                    <h3 className="product-heading">BC :</h3>{" "}
+                  <div className="d-flex gap-10 align-items-center m-1">
+                    <h3 className="product-heading">BC :</h3>
                     <p className="product-data">abcdf</p>
                   </div>
-                  <div className="d-flex gap-10 align-items-center">
-                    <h3 className="product-heading">ABC :</h3>{" "}
+                  <div className="d-flex gap-10 align-items-center m-1">
+                    <h3 className="product-heading">ABC :</h3>
                     <p className="product-data">abcdf</p>
                   </div>
-                  <div className="d-flex gap-10 align-items-center">
-                    <h3 className="product-heading">ABC :</h3>{" "}
+                  <div className="d-flex gap-10 align-items-center m-1">
+                    <h3 className="product-heading">ABC :</h3>
                     <p className="product-data">abcdf</p>
                   </div>
-                  <div className="d-flex gap-10 align-items-center">
-                    <h3 className="product-heading">BC :</h3>{" "}
+                  <div className="d-flex gap-10 align-items-center m-1">
+                    <h3 className="product-heading">BC :</h3>
                     <p className="product-data">abcdf</p>
                   </div>
                   <div className="d-flex gap-10 flex-column mt-2 mb-3">
@@ -126,11 +127,16 @@ const SingleProduct = () => {
                     </div>
                   </div>
                   <div className="d-flex gap-10 align-items-center">
-                    <h3 className="product-heading">ABC :</h3>{" "}
+                    <h3 className="product-heading">ABC :</h3>
                     <p className="product-data">abcdf</p>
                   </div>
+                  <div className="d-flex gap-15 align-items-center mb-3 ">
+                    <FaShareFromSquare className="fs-7 me-1" />
+                    <p className="product-data">Partager avec</p>
+                    <Share />
+                  </div>
 
-                  <div className="d-flex gap-15 align-items-center">
+                  <div className="d-flex gap-15 align-items-center ">
                     <div>
                       <a href="/">
                         <TbGitCompare className="fs-5 me-2" /> Add to Compare

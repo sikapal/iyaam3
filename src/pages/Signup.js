@@ -4,10 +4,13 @@ import BreadCrumb from "../components/BreadCrumb";
 import { Link } from "react-router-dom";
 import Googleauth from "./Googleauth";
 import validator from "validator";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const Signup = () => {
-  const [errorMessage, setErrorMessage] = useState("");
+  const [phone, setPhone] = useState("");
 
+  const [errorMessage, setErrorMessage] = useState("");
   const validate = (value) => {
     if (
       validator.isStrongPassword(value, {
@@ -23,6 +26,7 @@ const Signup = () => {
       setErrorMessage("This is Not Strong Password");
     }
   };
+
   return (
     <>
       <Meta title={"SignUp"} />
@@ -37,29 +41,23 @@ const Signup = () => {
 
                 <form action="" className="d-flex flex-column gap-15">
                   <div>
+                    <PhoneInput
+                      className="number"
+                      country={"cm"}
+                      value={phone}
+                      onChange={(phone) => setPhone(phone)}
+                    />
+                  </div>
+                  <div>
                     <input
                       type="text"
                       name="text"
                       placeholder="Name "
                       className="form-control"
+                      required
                     />
                   </div>
-                  <div>
-                    <input
-                      type="text"
-                      name="text"
-                      placeholder="Surname "
-                      className="form-control"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Email"
-                      className="form-control"
-                    />
-                  </div>
+
                   <div className="mt-1">
                     <input
                       type="password"
@@ -67,6 +65,7 @@ const Signup = () => {
                       placeholder="Password"
                       className="form-control"
                       onChange={(e) => validate(e.target.value)}
+                      required
                     />
                     <br />
                     {errorMessage === "" ? null : (

@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Meta from "../components/Meta";
 import BreadCrumb from "../components/BreadCrumb";
-
 import { Link } from "react-router-dom";
 import Googleauth from "./Googleauth";
-
-const login = () => {
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+const Login = () => {
+  const [phone, setPhone] = useState("");
   return (
     <>
       <Meta title={"Login"} />
@@ -20,11 +21,12 @@ const login = () => {
 
                 <form action="" className="d-flex flex-column gap-15">
                   <div>
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Email"
-                      className="form-control"
+                    <PhoneInput
+                      className="number"
+                      country={"cm"}
+                      placeholder="+237 671 897 744"
+                      value={phone}
+                      onChange={(phone) => setPhone(phone)}
                     />
                   </div>
                   <div className="mt-1">
@@ -40,7 +42,10 @@ const login = () => {
                     <Link to="/forgot-password">Forgot Password?</Link>
                     <div className="mt-3 d-flex justify-content-center gap-15 align-items-center">
                       <button className="button border-0 w-50">Login</button>
-                      <Link to="/signup" className="button signup w-50 text-white text-center">
+                      <Link
+                        to="/signup"
+                        className="button signup w-50 text-white text-center"
+                      >
                         SignUp
                       </Link>
                     </div>
@@ -58,4 +63,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;

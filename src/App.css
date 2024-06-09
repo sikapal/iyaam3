@@ -460,6 +460,16 @@ top: 17%;
   width: 500px;
   margin: 30px auto;
   border-radius: 10px;
+
+  .form-control {
+    background-color: var(--color-f5f5f7);
+    color: #777777;
+    height: 60px !important;
+    width: 450px !important;
+    border-radius: 10px;
+    border-color: transparent;
+    
+  }
 }
 
 .auth-card h3{
@@ -483,6 +493,7 @@ top: 17%;
   color: var(--color-131921);
 }
 
+
 .auth-card .signup{
   background-color: var(--color-febd69);
   color: var(--color-131921);
@@ -490,6 +501,10 @@ top: 17%;
 .auth-card .signup:hover{
   background-color: var(--color-131921);
   color: white;
+}
+
+.flag-dropdown {
+  background-color: #13478ab5 !important;
 }
 .breadcrumb{
   
@@ -592,11 +607,12 @@ padding: 30px;
   justify-content: center;
 }
 .main-product-details{
-  padding: 30px 20px ;
+  padding: 10px 20px ;
   border-radius: 10px;
   background-color: white;
 
 }
+
 .border-bottom{
   border-bottom: 1px solid rgba(0,0,0,0.25);
   
