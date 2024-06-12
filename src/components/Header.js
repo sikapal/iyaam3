@@ -5,6 +5,8 @@ import { IoChatbubbleOutline } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa6";
 import { FaCodeCompare } from "react-icons/fa6";
 import { HiLocationMarker } from "react-icons/hi";
+import Language from "./Language";
+
 //import { FaUser } from "react-icons/fa";
 import "rsuite/dist/rsuite.min.css";
 //import DropdownMenu from "rsuite/esm/Dropdown/DropdownMenu";
@@ -160,6 +162,7 @@ const Header = ({ filter, setFilter }) => {
                   <div className="d-flex align-items-center gap-15">
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/product">Articles</NavLink>
+                    <Language />
                     {/*<NavLink to="/blogs">Blogs</NavLink>
                     <NavLink to="/contact">Contact</NavLink> */}
                   </div>
